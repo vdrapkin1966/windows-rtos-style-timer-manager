@@ -1,0 +1,66 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  windows-build-test:
+    name: Windows CMake Build and Test
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure
+        shell: pwsh
+        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+
+      - name: Build
+        shell: pwsh
+        run: cmake --build build --config Debug
+
+      - name: Run regression tests
+        shell: pwsh
+        run: |
+          $serverPath = Join-Path $PWD "build\Debug\vdrapkinTimerManager.exe"
+          $serverOut = Join-Path $PWD "server-ci-output.txt"
+          $serverErr = Join-Path $PWD "server-ci-error.txt"
+          $serverProcess = $null
+
+          try {
+            $serverProcess = Start-Process `
+              -FilePath $serverPath `
+              -WindowStyle Hidden `
+              -RedirectStandardOutput $serverOut `
+              -RedirectStandardError $serverErr `
+              -PassThru
+
+            Start-Sleep -Seconds 2
+
+            ctest --test-dir build -C Debug --output-on-failure
+          }
+          finally {
+            if ($null -ne $serverProcess) {
+              Stop-Process -Id $serverProcess.Id -Force -ErrorAction SilentlyContinue
+              Wait-Process -Id $serverProcess.Id -Timeout 10 -ErrorAction SilentlyContinue
+            }
+
+            if (Test-Path -LiteralPath $serverOut) {
+              Write-Host "===== Server stdout ====="
+              Get-Content -LiteralPath $serverOut -Tail 200
+            }
+
+            if (Test-Path -LiteralPath $serverErr) {
+              Write-Host "===== Server stderr ====="
+              Get-Content -LiteralPath $serverErr -Tail 200
+            }
+          }

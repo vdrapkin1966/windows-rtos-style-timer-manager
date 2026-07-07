@@ -1,0 +1,10 @@
+/build/
+/build_gui/
+/.vs/
+/out/
+*.user
+*.suo
+*.VC.db
+*.opendb
+server_test_output.txt
+client_test_output.txt
