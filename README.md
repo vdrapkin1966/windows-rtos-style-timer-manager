@@ -1,3 +1,5 @@
+[![Build and Test](https://github.com/vdrapkin1966/windows-rtos-style-timer-manager/actions/workflows/build.yml/badge.svg)](https://github.com/vdrapkin1966/windows-rtos-style-timer-manager/actions/workflows/build.yml)
+
 # vdrapkinTimerManager
 
 Reference implementation of an asynchronous RTOS-style timer service for Windows written in C11.
