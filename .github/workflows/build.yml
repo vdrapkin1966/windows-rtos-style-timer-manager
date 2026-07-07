@@ -20,18 +20,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup MSVC Developer Command Prompt
+        uses: ilammy/msvc-dev-cmd@v1
+
       - name: Configure
         shell: pwsh
-        run: cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
 
       - name: Build
         shell: pwsh
-        run: cmake --build build --config Debug
+        run: cmake --build build
 
       - name: Run regression tests
         shell: pwsh
         run: |
-          $serverPath = Join-Path $PWD "build\Debug\vdrapkinTimerManager.exe"
+          $serverPath = Join-Path $PWD "build\vdrapkinTimerManager.exe"
           $serverOut = Join-Path $PWD "server-ci-output.txt"
           $serverErr = Join-Path $PWD "server-ci-error.txt"
           $serverProcess = $null
@@ -46,7 +49,7 @@ jobs:
 
             Start-Sleep -Seconds 2
 
-            ctest --test-dir build -C Debug --output-on-failure
+            ctest --test-dir build --output-on-failure
           }
           finally {
             if ($null -ne $serverProcess) {
@@ -58,6 +61,12 @@ jobs:
               Write-Host "===== Server stdout ====="
               Get-Content -LiteralPath $serverOut -Tail 200
             }
+
+            if (Test-Path -LiteralPath $serverErr) {
+              Write-Host "===== Server stderr ====="
+              Get-Content -LiteralPath $serverErr -Tail 200
+            }
+          }
 
             if (Test-Path -LiteralPath $serverErr) {
               Write-Host "===== Server stderr ====="
