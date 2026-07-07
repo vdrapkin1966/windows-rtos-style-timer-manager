@@ -67,9 +67,3 @@ jobs:
               Get-Content -LiteralPath $serverErr -Tail 200
             }
           }
-
-            if (Test-Path -LiteralPath $serverErr) {
-              Write-Host "===== Server stderr ====="
-              Get-Content -LiteralPath $serverErr -Tail 200
-            }
-          }
