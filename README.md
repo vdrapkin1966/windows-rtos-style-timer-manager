@@ -2,11 +2,11 @@
 
 # vdrapkinTimerManager
 
-Reference implementation of an asynchronous RTOS-style timer service for Windows written in C11.
+Reference implementation of an asynchronous RTOS-style timer service for Windows written in C.
 
 ## What Is This?
 
-`vdrapkinTimerManager` is a Windows C11 sample project that implements a console-based timer manager server and a client API library. An application links with the client API, creates one-shot timers, starts or restarts them with millisecond durations, and receives timer expiry notifications through an event handle that can be used with `WaitForMultipleObjects()`.
+`vdrapkinTimerManager` is a Windows C sample project that implements a console-based timer manager server and a client API library. An application links with the client API, creates one-shot timers, starts or restarts them with millisecond durations, and receives timer expiry notifications through an event handle that can be used with `WaitForMultipleObjects()`.
 
 The server owns all timer state. Client applications communicate with it through the named pipe `\\.\pipe\vdrapkinTimerManager`. Each client command receives one ACK response, and timer expiry is delivered asynchronously as a server-to-client indication.
 
@@ -42,7 +42,7 @@ This project demonstrates several practical engineering problems that appear in 
 
 The implementation uses:
 
-- C11.
+- C.
 - Windows API.
 - Visual Studio 2022.
 - CMake.
