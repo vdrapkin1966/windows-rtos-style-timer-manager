@@ -44,7 +44,7 @@
 
 /* Current fixed binary protocol version. Both client and server reject messages
  * whose header version does not match this value. */
-#define TIMER_PROTOCOL_VERSION 1
+#define TIMER_PROTOCOL_VERSION 2
 
 /* Header guard value carried in every pipe message. "TMGR" lets the receiver
  * reject data that is not a Timer Manager protocol message. */
@@ -152,6 +152,11 @@ typedef struct vdrStartTimerReq_tag {
 
     /* One-shot duration in milliseconds. Zero is rejected. */
     uint64_t duration_ms;
+
+    /* Monotonic timestamp captured by the client API immediately before the
+     * StartTimer request is sent. The server uses this value to subtract
+     * Windows scheduling and pipe-delivery delay from the requested duration. */
+    uint64_t api_start_timestamp_ms;
 } vdrStartTimerReq_type;
 
 typedef struct vdrStopTimerReq_tag {

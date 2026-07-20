@@ -261,21 +261,17 @@ static const char* SampleTimerName(
  */
 static uint64_t SampleRandomDurationMs(uint32_t minimum_seconds, uint32_t maximum_seconds)
 {
-    uint64_t duration_ms = 0;
-
     assert(minimum_seconds > 0);
     assert(maximum_seconds >= minimum_seconds);
 
     if ((minimum_seconds == 0) || (maximum_seconds < minimum_seconds)) {
-        duration_ms = 0;
+        return 0;
     } else {
         uint32_t duration_span = maximum_seconds - minimum_seconds + 1;
         uint32_t duration_seconds = minimum_seconds + (uint32_t)(rand() % duration_span);
 
-        duration_ms = (uint64_t)duration_seconds * 1000;
+        return (uint64_t)duration_seconds * 1000;
     }
-
-    return duration_ms;
 } /* end of SampleRandomDurationMs() */
 
 /*
@@ -457,14 +453,13 @@ static BOOL SampleDeleteTimer(const char* timer_name, TimerId_type* timer_id)
 static BOOL SampleCreateAllTimers(vdrSampleStateMachine_type* context)
 {
     BOOL created = FALSE;
-    vdrAckStatus_type status = vdrACK_STATUS_INTERNAL_ERROR;
 
     assert(context != NULL);
 
     if (context == NULL) {
         created = FALSE;
     } else {
-        status = SampleCreateTimer("T1", &context->timers.t1_timer_id);
+        vdrAckStatus_type status = SampleCreateTimer("T1", &context->timers.t1_timer_id);
 
         if (status == vdrACK_STATUS_OK) {
             status = SampleCreateTimer("T2", &context->timers.t2_timer_id);
@@ -541,7 +536,7 @@ static BOOL SampleStartIdleTimer(vdrSampleStateMachine_type* context)
     if (context == NULL) {
         started = FALSE;
     } else {
-        uint64_t duration_ms = SampleRandomDurationMs(
+        const uint64_t duration_ms = SampleRandomDurationMs(
             SAMPLE_T1_MIN_SECONDS,
             SAMPLE_T1_MAX_SECONDS);
 
@@ -565,7 +560,7 @@ static BOOL SampleStartGuardTimer(vdrSampleStateMachine_type* context)
     if (context == NULL) {
         started = FALSE;
     } else {
-        uint64_t duration_ms = SampleRandomDurationMs(
+        const uint64_t duration_ms = SampleRandomDurationMs(
             SAMPLE_T2_MIN_SECONDS,
             SAMPLE_T2_MAX_SECONDS);
 

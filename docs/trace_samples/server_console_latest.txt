@@ -1,0 +1,760 @@
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1359] [server][main] initializing timer core
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1382] [server][main] created waitable_timer=00000000000000B4 shutdown_event=00000000000000B8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1387] [server][main] console control handler installed
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1202] [server][listener-create] begin current_count=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:349] [server][pipe-create] begin role=LISTENER
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:402] [server][pipe-create] success pipe=00000000000000A8 event=00000000000000AC role=LISTENER client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:465] [server][listener] arm begin pipe=00000000000000A8 event=00000000000000AC
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:496] [server][listener] ConnectNamedPipe pending pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:438] [server][pipe-array] added pipe=00000000000000A8 role=LISTENER new_count=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1235] [server][listener-create] complete pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1397] [server][main] vdrapkinTimerManager started on \\.\pipe\vdrapkinTimerManager
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:226] [server][time] QueryPerformanceFrequency=10000000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=2 pipes=1 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=LISTENER operation=ACCEPT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1496] [server][accept] client connected on listener pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1202] [server][listener-create] begin current_count=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:349] [server][pipe-create] begin role=LISTENER
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:402] [server][pipe-create] success pipe=00000000000000BC event=00000000000000C0 role=LISTENER client_id=188
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:465] [server][listener] arm begin pipe=00000000000000BC event=00000000000000C0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:496] [server][listener] ConnectNamedPipe pending pipe=00000000000000BC
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:438] [server][pipe-array] added pipe=00000000000000BC role=LISTENER new_count=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1235] [server][listener-create] complete pipe=00000000000000BC
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=16 raw_type=CREATE_TIMER_REQ request=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=1 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:958] [server][command] dispatch CreateTimer request=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:971] [server][command] core CreateTimer done status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=1 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=1 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=1 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=16 raw_type=CREATE_TIMER_REQ request=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=2 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:958] [server][command] dispatch CreateTimer request=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:971] [server][command] core CreateTimer done status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=2 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=2 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=2 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=16 raw_type=CREATE_TIMER_REQ request=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=3 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:958] [server][command] dispatch CreateTimer request=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:971] [server][command] core CreateTimer done status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=3 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=3 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=3 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=16 raw_type=CREATE_TIMER_REQ request=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=4 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:958] [server][command] dispatch CreateTimer request=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:971] [server][command] core CreateTimer done status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=4 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=4 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=4 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=16 raw_type=CREATE_TIMER_REQ request=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=5 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:958] [server][command] dispatch CreateTimer request=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:971] [server][command] core CreateTimer done status=OK(0) timer=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=5 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=5 status=OK(0) timer=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=5 status=OK(0) timer=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=6
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=6 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=6 timer=1 duration_ms=5000 api_start_timestamp_ms=448976534 server_now_ms=448976534 elapsed_ms=0 adjusted_duration_ms=5000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=1 requested_duration_ms=5000 adjusted_duration_ms=5000 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=6 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=6 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=6
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=4999 ms now=448976535
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=6 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=4999 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=1 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=7
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=7 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=7 timer=2 duration_ms=5000 api_start_timestamp_ms=448981539 server_now_ms=448981540 elapsed_ms=1 adjusted_duration_ms=4999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=5000 adjusted_duration_ms=4999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=7 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=7 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=7
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=4999 ms now=448981540
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=7 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:570] [server][read] completed immediately pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=4999 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=8 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=8 timer=3 duration_ms=24000 api_start_timestamp_ms=448981540 server_now_ms=448981541 elapsed_ms=1 adjusted_duration_ms=23999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=3 requested_duration_ms=24000 adjusted_duration_ms=23999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=8 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=8 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=4998 ms now=448981541
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=8 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=4998 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=9
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=9 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=9 timer=4 duration_ms=14000 api_start_timestamp_ms=448981541 server_now_ms=448981542 elapsed_ms=1 adjusted_duration_ms=13999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=4 requested_duration_ms=14000 adjusted_duration_ms=13999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=9 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=9 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=9
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=4997 ms now=448981542
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=9 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=4997 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=2 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=8992 ms now=448986549
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=8992 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=10
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=10 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=10 timer=2 duration_ms=4000 api_start_timestamp_ms=448986550 server_now_ms=448986550 elapsed_ms=0 adjusted_duration_ms=4000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=4000 adjusted_duration_ms=4000 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=10 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=10 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=10
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3999 ms now=448986551
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=10 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3999 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=2 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=4976 ms now=448990565
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=4976 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=11
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=11 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=11 timer=2 duration_ms=3000 api_start_timestamp_ms=448990565 server_now_ms=448990566 elapsed_ms=1 adjusted_duration_ms=2999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=3000 adjusted_duration_ms=2999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=11 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=11 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=11
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=2999 ms now=448990566
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=11 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=2999 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=2 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=1964 ms now=448993577
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=1964 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=12
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=12 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=12 timer=2 duration_ms=5000 api_start_timestamp_ms=448993577 server_now_ms=448993577 elapsed_ms=0 adjusted_duration_ms=5000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=5000 adjusted_duration_ms=5000 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=12 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=12 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=12
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=1963 ms now=448993578
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=12 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=1963 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=4 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3031 ms now=448995546
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3031 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=24 raw_type=STOP_TIMER_REQ request=13
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=13 type=STOP_TIMER_REQ payload=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1047] [server][command] dispatch StopTimer request=13 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1061] [server][command] core StopTimer done timer=3 status=OK(0)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=13 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=13 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=13
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3012 ms now=448995565
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=13 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:570] [server][read] completed immediately pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3012 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=24 raw_type=STOP_TIMER_REQ request=14
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=14 type=STOP_TIMER_REQ payload=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1047] [server][command] dispatch StopTimer request=14 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1061] [server][command] core StopTimer done timer=2 status=OK(0)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=14 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=14 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=14
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=14 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:570] [server][read] completed immediately pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=15
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=15 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=15 timer=1 duration_ms=7000 api_start_timestamp_ms=448995592 server_now_ms=448995595 elapsed_ms=3 adjusted_duration_ms=6997
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=1 requested_duration_ms=7000 adjusted_duration_ms=6997 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=15 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=15 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=15
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=6969 ms now=448995623
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=15 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=6969 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=1 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=16 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=16 timer=2 duration_ms=4000 api_start_timestamp_ms=449002609 server_now_ms=449002614 elapsed_ms=5 adjusted_duration_ms=3995
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=4000 adjusted_duration_ms=3995 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=16 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=16 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=16
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3994 ms now=449002615
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=16 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:570] [server][read] completed immediately pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3993 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=17
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=17 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=17 timer=3 duration_ms=19000 api_start_timestamp_ms=449002615 server_now_ms=449002616 elapsed_ms=1 adjusted_duration_ms=18999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=3 requested_duration_ms=19000 adjusted_duration_ms=18999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=17 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=17 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=17
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3988 ms now=449002621
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=17 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:570] [server][read] completed immediately pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3988 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=18
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=18 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=18 timer=4 duration_ms=5000 api_start_timestamp_ms=449002617 server_now_ms=449002621 elapsed_ms=4 adjusted_duration_ms=4996
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=4 requested_duration_ms=5000 adjusted_duration_ms=4996 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=18 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=18 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=18
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3987 ms now=449002622
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=18 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3987 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=2 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=951 ms now=449006666
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=951 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=19
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=19 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=19 timer=2 duration_ms=4000 api_start_timestamp_ms=449006665 server_now_ms=449006667 elapsed_ms=2 adjusted_duration_ms=3998
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=4000 adjusted_duration_ms=3998 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=19 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=19 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=19
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=950 ms now=449006667
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=19 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=929 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=4 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3015 ms now=449007650
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3015 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=24 raw_type=STOP_TIMER_REQ request=20
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=20 type=STOP_TIMER_REQ payload=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1047] [server][command] dispatch StopTimer request=20 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1061] [server][command] core StopTimer done timer=3 status=OK(0)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=20 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=20 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=20
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3014 ms now=449007651
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=20 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:570] [server][read] completed immediately pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3013 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=24 raw_type=STOP_TIMER_REQ request=21
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=21 type=STOP_TIMER_REQ payload=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1047] [server][command] dispatch StopTimer request=21 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1061] [server][command] core StopTimer done timer=2 status=OK(0)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=21 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=21 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=21
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=21 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=22
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=22 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=22 timer=1 duration_ms=6000 api_start_timestamp_ms=449007653 server_now_ms=449007653 elapsed_ms=0 adjusted_duration_ms=6000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=1 requested_duration_ms=6000 adjusted_duration_ms=6000 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=22 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=22 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=22
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=5999 ms now=449007654
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=22 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=5999 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=1 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:890] [server][timer-arm] no active timers; waitable timer canceled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=3 pipes=2 timer_active=0 waitable_timer_index=64 next_wait=0 shutdown_index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=23
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=23 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=23 timer=2 duration_ms=3000 api_start_timestamp_ms=449013707 server_now_ms=449013710 elapsed_ms=3 adjusted_duration_ms=2997
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=3000 adjusted_duration_ms=2997 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=23 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=23 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=23
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=2991 ms now=449013716
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=23 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:570] [server][read] completed immediately pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=2991 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=24 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=24 timer=3 duration_ms=13000 api_start_timestamp_ms=449013716 server_now_ms=449013717 elapsed_ms=1 adjusted_duration_ms=12999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=3 requested_duration_ms=13000 adjusted_duration_ms=12999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=24 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=24 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=2990 ms now=449013717
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=24 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:570] [server][read] completed immediately pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=2990 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=25
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=25 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=25 timer=4 duration_ms=16000 api_start_timestamp_ms=449013717 server_now_ms=449013718 elapsed_ms=1 adjusted_duration_ms=15999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=4 requested_duration_ms=16000 adjusted_duration_ms=15999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=25 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=25 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=25
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=2983 ms now=449013724
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=25 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=2983 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=2 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=10005 ms now=449016711
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=10005 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=26
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=26 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=26 timer=2 duration_ms=4000 api_start_timestamp_ms=449016711 server_now_ms=449016712 elapsed_ms=1 adjusted_duration_ms=3999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=4000 adjusted_duration_ms=3999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=26 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=26 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=26
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=3999 ms now=449016712
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=26 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=3999 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1474] [server][wait] waitable timer signaled
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1169] [server][timer-expiry] begin
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1145] [server][timer-expiry] sending indication timer=2 pipe=00000000000000A8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:734] [server][expiry-send] sent timer expiry indication timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1154] [server][timer-expiry] indication complete timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1179] [server][timer-expiry] rearming waitable timer after expiry processing
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=6000 ms now=449020716
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1181] [server][timer-expiry] complete
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=6000 shutdown_index=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1461] [server][wait] signaled index=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1488] [server][wait] pipe event signaled index=0 pipe=00000000000000A8 role=CLIENT operation=READ
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1556] [server][read-complete] pipe=00000000000000A8 bytes=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:944] [server][command] begin pipe=00000000000000A8 bytes=40 raw_type=START_TIMER_REQ request=27
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:268] [server][validate] begin bytes_read=40
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:331] [server][validate] pass: request=27 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1000] [server][command] dispatch StartTimer request=27 timer=2 duration_ms=3000 api_start_timestamp_ms=449020716 server_now_ms=449020717 elapsed_ms=1 adjusted_duration_ms=2999
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1038] [server][command] core StartTimer done timer=2 requested_duration_ms=3000 adjusted_duration_ms=2999 status=OK(0) immediate_expiry=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:613] [server][send] begin pipe=00000000000000A8 type=ACK_RSP request=27 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:653] [server][send] completed pipe=00000000000000A8 transferred=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:696] [server][ack] sent ACK request=27 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1107] [server][command] rearming waitable timer after request=27
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:915] [server][timer-arm] waitable timer armed duration=2999 ms now=449020717
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1113] [server][command] complete request=27 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:758] [server][pipe-find] found pipe=00000000000000A8 index=0 role=CLIENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:537] [server][read] arm begin pipe=00000000000000A8 client_id=168
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:579] [server][read] ReadFile returned error=997 pipe=00000000000000A8 (pending)
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1571] [server][read-rearm] success pipe=00000000000000A8
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\server\vdrapkin_timer_manager_server.c:1445] [server][wait] waiting handles=4 pipes=2 timer_active=1 waitable_timer_index=2 next_wait=2999 shutdown_index=3

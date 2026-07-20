@@ -922,10 +922,11 @@ static void vdrRearmWaitableTimer(void)
 static void vdrHandleCommand(PipeInstance_type* instance)
 {
     vdrServerState_type* server_state = vdrServer_GetState();
-    vdrClientToServerMessage_type* message;
-    vdrAckStatus_type status;
-    TimerId_type ack_timer_id;
-    uint32_t request_id;
+    vdrClientToServerMessage_type* message = NULL;
+    vdrAckStatus_type status = vdrACK_STATUS_PROTOCOL_ERROR;
+    TimerId_type ack_timer_id = TIMER_ID_INVALID;
+    uint32_t request_id = 0;
+    BOOL send_immediate_expiry = FALSE;
 
     assert(instance != NULL);
 
@@ -935,8 +936,6 @@ static void vdrHandleCommand(PipeInstance_type* instance)
 
     message = &instance->inbound_message;
     request_id = message->header.request_id;
-    status = vdrACK_STATUS_PROTOCOL_ERROR;
-    ack_timer_id = TIMER_ID_INVALID;
 
     PRINTOUT_TRACE("[server][command] begin pipe=%p bytes=%lu raw_type=%s request=%u\n",
         instance->pipe,
@@ -973,29 +972,72 @@ static void vdrHandleCommand(PipeInstance_type* instance)
         break;
 
     case vdrMESSAGE_TYPE_START_TIMER_REQ:
+    {
+        const uint64_t server_now_ms = vdrGetTimeMs();
+        uint64_t elapsed_ms = 0;
+        uint64_t adjusted_duration_ms = message->start_timer_req.duration_ms;
+
         ack_timer_id = message->start_timer_req.timer_id;
 
-        PRINTOUT_TRACE("[server][command] dispatch StartTimer request=%u timer=%llu duration=%llu\n",
+        if (server_now_ms >= message->start_timer_req.api_start_timestamp_ms) {
+            elapsed_ms = server_now_ms - message->start_timer_req.api_start_timestamp_ms;
+        }
+
+        if (message->start_timer_req.duration_ms > 0) {
+            adjusted_duration_ms =
+                (elapsed_ms >= message->start_timer_req.duration_ms) ?
+                    0 :
+                    (message->start_timer_req.duration_ms - elapsed_ms);
+        }
+
+        PRINTOUT_TRACE("[server][command] dispatch StartTimer request=%u timer=%llu duration_ms=%llu api_start_timestamp_ms=%llu server_now_ms=%llu elapsed_ms=%llu adjusted_duration_ms=%llu\n",
             request_id,
             (unsigned long long)ack_timer_id,
-            (unsigned long long)message->start_timer_req.duration_ms);
+            (unsigned long long)message->start_timer_req.duration_ms,
+            (unsigned long long)message->start_timer_req.api_start_timestamp_ms,
+            (unsigned long long)server_now_ms,
+            (unsigned long long)elapsed_ms,
+            (unsigned long long)adjusted_duration_ms);
 
-        status = vdrTimerCore_StartTimer(
-            &server_state->timer_core,
-            instance->pipe,
-            message->start_timer_req.timer_id,
-            message->start_timer_req.duration_ms,
-            vdrGetTimeMs());
+        if (message->start_timer_req.duration_ms == 0) {
+            status = vdrACK_STATUS_INVALID_DURATION;
+        } else if (adjusted_duration_ms == 0) {
+            /* The API-side start timestamp proves that the requested duration
+             * already elapsed before the server processed this command. Use the
+             * existing StopTimer lifecycle operation to ensure an inactive
+             * final state without letting the server manipulate core lists
+             * directly. If the timer was active, this removes the old schedule;
+             * if it was inactive, StopTimer succeeds idempotently. */
+            status = vdrTimerCore_StopTimer(
+                &server_state->timer_core,
+                instance->pipe,
+                message->start_timer_req.timer_id,
+                server_now_ms);
+
+            if (status == vdrACK_STATUS_OK) {
+                send_immediate_expiry = TRUE;
+            }
+        } else {
+            status = vdrTimerCore_StartTimer(
+                &server_state->timer_core,
+                instance->pipe,
+                message->start_timer_req.timer_id,
+                adjusted_duration_ms,
+                server_now_ms);
+        }
 
         /* StartTimer may change the global active-list head. After the ACK, the
          * server rearms the waitable timer so the main loop wakes at the new
          * scheduled expiry. */
-        PRINTOUT_TRACE("[server][command] core StartTimer done timer=%llu duration=%llu status=%s(%u)\n",
+        PRINTOUT_TRACE("[server][command] core StartTimer done timer=%llu requested_duration_ms=%llu adjusted_duration_ms=%llu status=%s(%u) immediate_expiry=%u\n",
             (unsigned long long)ack_timer_id,
             (unsigned long long)message->start_timer_req.duration_ms,
+            (unsigned long long)adjusted_duration_ms,
             vdrServer_AckStatusName(status),
-            (unsigned)status);
+            (unsigned)status,
+            (unsigned)(send_immediate_expiry == TRUE));
         break;
+    }
 
     case vdrMESSAGE_TYPE_STOP_TIMER_REQ:
         ack_timer_id = message->stop_timer_req.timer_id;
@@ -1048,6 +1090,16 @@ static void vdrHandleCommand(PipeInstance_type* instance)
 
     if (vdrSendAck(instance, request_id, status, ack_timer_id) == FALSE) {
         PRINTOUT_TRACE("[server][command] ACK send failed; client disconnected during send\n");
+    } else if ((send_immediate_expiry == TRUE) && (status == vdrACK_STATUS_OK)) {
+        /* Preserve synchronous command ordering: the command ACK is delivered
+         * first, then the asynchronous expiry indication caused by that command
+         * is sent to the same client. */
+        PRINTOUT_TRACE("[server][command] sending immediate expiry after ACK timer=%llu\n",
+            (unsigned long long)ack_timer_id);
+        if (vdrSendExpired(instance, ack_timer_id) == FALSE) {
+            PRINTOUT_TRACE("[server][command] immediate expiry send failed after ACK timer=%llu\n",
+                (unsigned long long)ack_timer_id);
+        }
     }
 
     /* Any command may have changed the active list head, so the waitable timer
@@ -1190,7 +1242,7 @@ static BOOL vdrCreateAndArmListener(void)
 static BOOL vdrHasListenerPipe(void)
 {
     vdrServerState_type* server_state = vdrServer_GetState();
-    DWORD pipe_index;
+    DWORD pipe_index = 0;
 
     for (pipe_index = 0; pipe_index < server_state->pipe_count; ++pipe_index) {
         if ((server_state->pipes[pipe_index] != NULL) &&
@@ -1302,7 +1354,7 @@ static void vdrCleanupServer(void)
 int main(void)
 {
     vdrServerState_type* server_state = vdrServer_GetState();
-    BOOL running;
+    BOOL running = TRUE;
 
     PRINTOUT_TRACE("[server][main] initializing timer core\n");
 
@@ -1343,34 +1395,24 @@ int main(void)
     }
 
     PRINTOUT_TRACE("[server][main] vdrapkinTimerManager started on %ls\n", PIPE_NAME);
-    running = TRUE;
 
     while (running == TRUE) {
         HANDLE wait_handles[TIMER_SERVER_MAX_WAIT_HANDLES];
-        DWORD pipe_index;
-        DWORD wait_count;
-        DWORD wait_result;
-        DWORD waitable_timer_index;
-        DWORD shutdown_index;
-        uint64_t next_wait_ms;
-        BOOL timer_in_wait_set;
+        DWORD pipe_index = 0;
+        DWORD wait_count = server_state->pipe_count;
+        DWORD wait_result = WAIT_FAILED;
+        DWORD waitable_timer_index = TIMER_SERVER_MAX_WAIT_HANDLES;
+        DWORD shutdown_index = 0;
+        uint64_t next_wait_ms = 0;
+        BOOL timer_in_wait_set = FALSE;
 
         for (pipe_index = 0; pipe_index < server_state->pipe_count; ++pipe_index) {
             wait_handles[pipe_index] =
                 server_state->pipes[pipe_index]->overlapped.hEvent;
         }
 
-        /* Pipe events are already placed at the beginning of wait_handles, so
-         * the next available wait slot starts immediately after the pipe list. */
-        wait_count = server_state->pipe_count;
-
-        /* The timer handle is not part of the wait set until the timer core
-         * confirms that at least one active timer exists. */
-        waitable_timer_index = TIMER_SERVER_MAX_WAIT_HANDLES;
-
-        /* The timer core fills this with the delay to the next scheduled
-         * expiry; the value is printed for traceability of timer scheduling. */
-        next_wait_ms = 0;
+        /* wait_count starts after the copied pipe events because the next wait
+         * handle, if any, must be appended after the client/listener pipes. */
 
         /* Querying the active timer list determines whether the server loop
          * should wait on the waitable timer during this iteration. */

@@ -22,6 +22,7 @@
  *   - Initial implementation.
  */
 #include <windows.h>
+#include <assert.h>
 #include <stdio.h>
 #include <string.h>
 

@@ -93,14 +93,13 @@ static Timer_type* vdrFindAndMaybeDetach(
     HANDLE owner_pipe,
     BOOL detach)
 {
-    Timer_type* previous;
-    Timer_type* current;
+    Timer_type* previous = NULL;
+    Timer_type* current = NULL;
 
     assert(head != NULL);
     assert(timer_id != TIMER_ID_INVALID);
     assert(!vdrIsInvalidOwnerPipe(owner_pipe));
 
-    previous = NULL;
     current = *head;
 
     /* Walk the intrusive singly-linked list while remembering the previous link
@@ -182,15 +181,13 @@ static void vdrListPushFront(Timer_type** head, Timer_type* timer)
  */
 static void vdrRecalculateActiveDeltas(vdrTimerCore_type* core, uint64_t now_ms)
 {
-    Timer_type* current;
-    uint64_t previous_expiry;
-    BOOL first;
+    Timer_type* current = NULL;
+    uint64_t previous_expiry = now_ms;
+    BOOL first = TRUE;
 
     assert(core != NULL);
 
     current = core->active_head;
-    previous_expiry = now_ms;
-    first = TRUE;
 
     while (current != NULL) {
         const uint64_t current_expiry = vdrTimerScheduledExpiry(current);
@@ -221,14 +218,13 @@ static void vdrRecalculateActiveDeltas(vdrTimerCore_type* core, uint64_t now_ms)
  */
 static void vdrInsertActiveSorted(vdrTimerCore_type* core, Timer_type* timer, uint64_t now_ms)
 {
-    Timer_type* previous;
-    Timer_type* current;
+    Timer_type* previous = NULL;
+    Timer_type* current = NULL;
     const uint64_t new_expiry = vdrTimerScheduledExpiry(timer);
 
     assert(core != NULL);
     assert(timer != NULL);
 
-    previous = NULL;
     current = core->active_head;
 
     /* Keep walking while existing timers expire before or at the same time as
@@ -598,8 +594,8 @@ void vdrTimerCore_ProcessExpired(
 void vdrTimerCore_RemoveTimersForPipe(vdrTimerCore_type* core, HANDLE owner_pipe)
 {
     Timer_type** lists[2];
-    uint32_t list_index;
-    BOOL active_list_changed;
+    uint32_t list_index = 0;
+    BOOL active_list_changed = FALSE;
 
     assert(core != NULL);
 
@@ -609,7 +605,6 @@ void vdrTimerCore_RemoveTimersForPipe(vdrTimerCore_type* core, HANDLE owner_pipe
 
     lists[0] = &core->inactive_head;
     lists[1] = &core->active_head;
-    active_list_changed = FALSE;
 
     for (list_index = 0; list_index < 2; ++list_index) {
         Timer_type** link = lists[list_index];
@@ -706,8 +701,8 @@ BOOL vdrTimerCore_TimerIdInUse(vdrTimerCore_type* core, TimerId_type timer_id)
  */
 uint32_t vdrTimerCore_CountActive(vdrTimerCore_type* core)
 {
-    Timer_type* current;
-    uint32_t count;
+    Timer_type* current = NULL;
+    uint32_t count = 0;
 
     assert(core != NULL);
 
@@ -715,7 +710,6 @@ uint32_t vdrTimerCore_CountActive(vdrTimerCore_type* core)
         return 0;
     }
 
-    count = 0;
     current = core->active_head;
 
     while (current != NULL) {
@@ -731,8 +725,8 @@ uint32_t vdrTimerCore_CountActive(vdrTimerCore_type* core)
  */
 uint32_t vdrTimerCore_CountInactive(vdrTimerCore_type* core)
 {
-    Timer_type* current;
-    uint32_t count;
+    Timer_type* current = NULL;
+    uint32_t count = 0;
 
     assert(core != NULL);
 
@@ -740,7 +734,6 @@ uint32_t vdrTimerCore_CountInactive(vdrTimerCore_type* core)
         return 0;
     }
 
-    count = 0;
     current = core->inactive_head;
 
     while (current != NULL) {

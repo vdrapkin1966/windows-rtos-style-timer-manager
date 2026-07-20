@@ -1,0 +1,297 @@
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:313] [sample-client][timer] creating T1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:731] [client-api] connected to pipe \\.\pipe\vdrapkinTimerManager handle=00000000000000C0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:752] [client-api] pipe read mode set to message mode
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:783] [client-api] initialization complete receiver_thread=00000000000000C4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=1 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=1 bytes=16; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=1 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=1 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=1 type=CREATE_TIMER_REQ status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:319] [sample-client][timer] created T1 timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:313] [sample-client][timer] creating T2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=2 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=2 bytes=16; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=2 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=2 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=2 type=CREATE_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:319] [sample-client][timer] created T2 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:313] [sample-client][timer] creating T3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=3 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=3 bytes=16; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=3 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=3 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=3 type=CREATE_TIMER_REQ status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:319] [sample-client][timer] created T3 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:313] [sample-client][timer] creating T4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=4 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=4 bytes=16; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=4 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=4 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=4 type=CREATE_TIMER_REQ status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:319] [sample-client][timer] created T4 timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:313] [sample-client][timer] creating T5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=5 type=CREATE_TIMER_REQ payload=0
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=5 bytes=16; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=5 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=5 status=OK(0) timer=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=5 type=CREATE_TIMER_REQ status=OK(0) timer=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:319] [sample-client][timer] created T5 timer=5
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:1034] [sample-client][main] requesting Timer Manager notification event
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:1041] [sample-client][state] initial state=IDLE
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T1 timer=1 duration_ms=5000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=1 duration_ms=5000 api_start_timestamp_ms=448976534
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=6 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=6 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=6 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=6 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=6 type=START_TIMER_REQ status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T1 timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T1 expired timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:610] [sample-client][message][TX] CONNECTION_REQUEST attempt=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:295] [sample-client][state] IDLE -> WAITING_FOR_CONNECTION_ESTABLISHMENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:616] [sample-client][scenario] T3_accept_ms=24000 T4_reject_ms=14000 expected_response=CONNECTION_REJECT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=5000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=5000 api_start_timestamp_ms=448981539
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=7 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=7 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=7 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=7 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=7 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T3 timer=3 duration_ms=24000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=3 duration_ms=24000 api_start_timestamp_ms=448981540
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=8 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=8 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=8 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=8 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=8 type=START_TIMER_REQ status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T3 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T4 timer=4 duration_ms=14000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=4 duration_ms=14000 api_start_timestamp_ms=448981541
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=9 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=9 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=9 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=9 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=9 type=START_TIMER_REQ status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T4 timer=4
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T2 expired timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:648] [sample-client][message][TX] CONNECTION_REQUEST attempt=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=4000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=4000 api_start_timestamp_ms=448986550
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=10 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=10 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=10 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=10 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=10 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T2 expired timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:648] [sample-client][message][TX] CONNECTION_REQUEST attempt=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=3000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=3000 api_start_timestamp_ms=448990565
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=11 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=11 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=11 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=11 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=11 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T2 expired timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:648] [sample-client][message][TX] CONNECTION_REQUEST attempt=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=5000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=5000 api_start_timestamp_ms=448993577
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=12 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=12 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=12 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=12 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=12 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T4 expired timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:720] [sample-client][message][RX] CONNECTION_REJECT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:388] [sample-client][timer] stopping T3 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=13 type=STOP_TIMER_REQ payload=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=13 bytes=24; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=13 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=13 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=13 type=STOP_TIMER_REQ status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:394] [sample-client][timer] stopped T3 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:388] [sample-client][timer] stopping T2 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=14 type=STOP_TIMER_REQ payload=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=14 bytes=24; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=14 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=14 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=14 type=STOP_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:394] [sample-client][timer] stopped T2 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:295] [sample-client][state] WAITING_FOR_CONNECTION_ESTABLISHMENT -> IDLE
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T1 timer=1 duration_ms=7000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=1 duration_ms=7000 api_start_timestamp_ms=448995592
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=15 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=15 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=15 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=15 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=15 type=START_TIMER_REQ status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T1 timer=1
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T1 expired timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:610] [sample-client][message][TX] CONNECTION_REQUEST attempt=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:295] [sample-client][state] IDLE -> WAITING_FOR_CONNECTION_ESTABLISHMENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:616] [sample-client][scenario] T3_accept_ms=19000 T4_reject_ms=5000 expected_response=CONNECTION_REJECT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=4000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=4000 api_start_timestamp_ms=449002609
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=16 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=16 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=16 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=16 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=16 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T3 timer=3 duration_ms=19000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=3 duration_ms=19000 api_start_timestamp_ms=449002615
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=17 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=17 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=17 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=17 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=17 type=START_TIMER_REQ status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T3 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T4 timer=4 duration_ms=5000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=4 duration_ms=5000 api_start_timestamp_ms=449002617
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=18 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=18 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=18 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=18 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=18 type=START_TIMER_REQ status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T4 timer=4
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T2 expired timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:648] [sample-client][message][TX] CONNECTION_REQUEST attempt=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=4000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=4000 api_start_timestamp_ms=449006665
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=19 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=19 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=19 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=19 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=19 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T4 expired timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:720] [sample-client][message][RX] CONNECTION_REJECT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:388] [sample-client][timer] stopping T3 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=20 type=STOP_TIMER_REQ payload=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=20 bytes=24; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=20 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=20 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=20 type=STOP_TIMER_REQ status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:394] [sample-client][timer] stopped T3 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:388] [sample-client][timer] stopping T2 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=21 type=STOP_TIMER_REQ payload=8
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=21 bytes=24; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=21 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=21 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=21 type=STOP_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:394] [sample-client][timer] stopped T2 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:295] [sample-client][state] WAITING_FOR_CONNECTION_ESTABLISHMENT -> IDLE
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T1 timer=1 duration_ms=6000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=1 duration_ms=6000 api_start_timestamp_ms=449007653
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=22 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=22 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=22 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=22 status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=22 type=START_TIMER_REQ status=OK(0) timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T1 timer=1
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T1 expired timer=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:610] [sample-client][message][TX] CONNECTION_REQUEST attempt=1
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:295] [sample-client][state] IDLE -> WAITING_FOR_CONNECTION_ESTABLISHMENT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:616] [sample-client][scenario] T3_accept_ms=13000 T4_reject_ms=16000 expected_response=CONNECTION_ACCEPT
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=3000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=3000 api_start_timestamp_ms=449013707
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=23 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=23 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=23 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=23 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=23 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T3 timer=3 duration_ms=13000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=3 duration_ms=13000 api_start_timestamp_ms=449013716
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=24 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=24 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=24 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=24 status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=24 type=START_TIMER_REQ status=OK(0) timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T3 timer=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T4 timer=4 duration_ms=16000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=4 duration_ms=16000 api_start_timestamp_ms=449013717
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=25 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=25 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=25 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=25 status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=25 type=START_TIMER_REQ status=OK(0) timer=4
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T4 timer=4
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T2 expired timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:648] [sample-client][message][TX] CONNECTION_REQUEST attempt=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=4000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=4000 api_start_timestamp_ms=449016711
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=26 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=26 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=26 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=26 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=26 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+
+
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=TIMER_EXPIRED_EVT request=0 bytes=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:506] [client-api] queued timer expiry indication: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1182] [client-api] application retrieved expired timer: timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:842] [sample-client][timer-expiry] T2 expired timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:648] [sample-client][message][TX] CONNECTION_REQUEST attempt=3
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:352] [sample-client][timer] starting T2 timer=2 duration_ms=3000
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:1027] [client-api] StartTimer accepted timer=2 duration_ms=3000 api_start_timestamp_ms=449020716
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:855] [client-api] sending request: request=27 type=START_TIMER_REQ payload=24
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:900] [client-api] request written: request=27 bytes=40; waiting for ACK
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:604] [client-api] receiver read message type=ACK_RSP request=27 bytes=32
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:627] [client-api] received ACK: request=27 status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\src\client\vdr_timer_manager_api.c:926] [client-api] completed request: request=27 type=START_TIMER_REQ status=OK(0) timer=2
+[C:\Users\vdrap\OneDrive\Documents\Timer management\windows-rtos-style-timer-manager\samples\sample_client\sample_client.c:358] [sample-client][timer] started T2 timer=2
+
+

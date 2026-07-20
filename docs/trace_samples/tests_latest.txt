@@ -1,0 +1,124 @@
+Internal ctest changing into directory: C:/Users/vdrap/OneDrive/Documents/Timer management/windows-rtos-style-timer-manager/build
+Test project C:/Users/vdrap/OneDrive/Documents/Timer management/windows-rtos-style-timer-manager/build
+      Start  1: vdrTimerManagerTests.CreateTimerCreatesInactiveTimer
+ 1/59 Test  #1: vdrTimerManagerTests.CreateTimerCreatesInactiveTimer ........................................   Passed    0.47 sec
+      Start  2: vdrTimerManagerTests.CreateTimerAllocatesRunningIds
+ 2/59 Test  #2: vdrTimerManagerTests.CreateTimerAllocatesRunningIds .........................................   Passed    0.10 sec
+      Start  3: vdrTimerManagerTests.TimerIdWrapSkipsInvalidId
+ 3/59 Test  #3: vdrTimerManagerTests.TimerIdWrapSkipsInvalidId ..............................................   Passed    0.09 sec
+      Start  4: vdrTimerManagerTests.TimerIdWrapSkipsIdAlreadyInUse
+ 4/59 Test  #4: vdrTimerManagerTests.TimerIdWrapSkipsIdAlreadyInUse .........................................   Passed    0.10 sec
+      Start  5: vdrTimerManagerTests.StartTimerMovesInactiveToActive
+ 5/59 Test  #5: vdrTimerManagerTests.StartTimerMovesInactiveToActive ........................................   Passed    0.08 sec
+      Start  6: vdrTimerManagerTests.StartTimerRejectsZeroDuration
+ 6/59 Test  #6: vdrTimerManagerTests.StartTimerRejectsZeroDuration ..........................................   Passed    0.07 sec
+      Start  7: vdrTimerManagerTests.InvalidTimerIdRejectedByCommands
+ 7/59 Test  #7: vdrTimerManagerTests.InvalidTimerIdRejectedByCommands .......................................   Passed    0.12 sec
+      Start  8: vdrTimerManagerTests.WrongOwnerRejectedByCommands
+ 8/59 Test  #8: vdrTimerManagerTests.WrongOwnerRejectedByCommands ...........................................   Passed    0.08 sec
+      Start  9: vdrTimerManagerTests.SortedDeltaListUsesScheduledExpiryDeltas
+ 9/59 Test  #9: vdrTimerManagerTests.SortedDeltaListUsesScheduledExpiryDeltas ...............................   Passed    0.09 sec
+      Start 10: vdrTimerManagerTests.EqualExpiryTimersExpireTogether
+10/59 Test #10: vdrTimerManagerTests.EqualExpiryTimersExpireTogether ........................................   Passed    0.07 sec
+      Start 11: vdrTimerManagerTests.ProcessExpiredDoesNotExpireEarly
+11/59 Test #11: vdrTimerManagerTests.ProcessExpiredDoesNotExpireEarly .......................................   Passed    0.08 sec
+      Start 12: vdrTimerManagerTests.ProcessExpiredMovesTimerBackInactive
+12/59 Test #12: vdrTimerManagerTests.ProcessExpiredMovesTimerBackInactive ...................................   Passed    0.08 sec
+      Start 13: vdrTimerManagerTests.ProcessExpiredWithNullCallbackMovesTimerInactive
+13/59 Test #13: vdrTimerManagerTests.ProcessExpiredWithNullCallbackMovesTimerInactive .......................   Passed    0.07 sec
+      Start 14: vdrTimerManagerTests.ProcessExpiredMultipleStaggeredTimersInOrder
+14/59 Test #14: vdrTimerManagerTests.ProcessExpiredMultipleStaggeredTimersInOrder ...........................   Passed    0.08 sec
+      Start 15: vdrTimerManagerTests.PartialExpiryLeavesLaterTimersActive
+15/59 Test #15: vdrTimerManagerTests.PartialExpiryLeavesLaterTimersActive ...................................   Passed    0.09 sec
+      Start 16: vdrTimerManagerTests.ExpiredTimerCanBeRestarted
+16/59 Test #16: vdrTimerManagerTests.ExpiredTimerCanBeRestarted .............................................   Passed    0.10 sec
+      Start 17: vdrTimerManagerTests.RestartActiveTimerWithShorterDuration
+17/59 Test #17: vdrTimerManagerTests.RestartActiveTimerWithShorterDuration ..................................   Passed    0.09 sec
+      Start 18: vdrTimerManagerTests.RestartActiveTimerWithLongerDuration
+18/59 Test #18: vdrTimerManagerTests.RestartActiveTimerWithLongerDuration ...................................   Passed    0.12 sec
+      Start 19: vdrTimerManagerTests.StopActiveTimerMovesItInactive
+19/59 Test #19: vdrTimerManagerTests.StopActiveTimerMovesItInactive .........................................   Passed    0.21 sec
+      Start 20: vdrTimerManagerTests.StopMiddleActiveTimerPreservesFollowingDelta
+20/59 Test #20: vdrTimerManagerTests.StopMiddleActiveTimerPreservesFollowingDelta ...........................   Passed    0.10 sec
+      Start 21: vdrTimerManagerTests.StopInactiveTimerIsSuccessful
+21/59 Test #21: vdrTimerManagerTests.StopInactiveTimerIsSuccessful ..........................................   Passed    0.10 sec
+      Start 22: vdrTimerManagerTests.DeleteInactiveTimerRemovesIt
+22/59 Test #22: vdrTimerManagerTests.DeleteInactiveTimerRemovesIt ...........................................   Passed    0.10 sec
+      Start 23: vdrTimerManagerTests.DeleteActiveTimerRemovesItAndKeepsOthers
+23/59 Test #23: vdrTimerManagerTests.DeleteActiveTimerRemovesItAndKeepsOthers ...............................   Passed    0.10 sec
+      Start 24: vdrTimerManagerTests.DeleteMiddleActiveTimerPreservesFollowingDelta
+24/59 Test #24: vdrTimerManagerTests.DeleteMiddleActiveTimerPreservesFollowingDelta .........................   Passed    0.08 sec
+      Start 25: vdrTimerManagerTests.GetNextWaitDurationWhenNoActiveTimer
+25/59 Test #25: vdrTimerManagerTests.GetNextWaitDurationWhenNoActiveTimer ...................................   Passed    0.09 sec
+      Start 26: vdrTimerManagerTests.RemoveTimersForPipeRemovesOnlyThatOwner
+26/59 Test #26: vdrTimerManagerTests.RemoveTimersForPipeRemovesOnlyThatOwner ................................   Passed    0.08 sec
+      Start 27: vdrTimerManagerTests.RemoveTimersForPipePreservesRemainingActiveDeltas
+27/59 Test #27: vdrTimerManagerTests.RemoveTimersForPipePreservesRemainingActiveDeltas ......................   Passed    0.08 sec
+      Start 28: vdrTimerManagerTests.ExpiryArithmeticSaturatesAtUint64Max
+28/59 Test #28: vdrTimerManagerTests.ExpiryArithmeticSaturatesAtUint64Max ...................................   Passed    0.08 sec
+      Start 29: vdrTimerManagerTests.NearUint64MaxTimersRemainOrdered
+29/59 Test #29: vdrTimerManagerTests.NearUint64MaxTimersRemainOrdered .......................................   Passed    0.10 sec
+      Start 30: vdrTimerManagerTests.DeinitRemovesAllTimers
+30/59 Test #30: vdrTimerManagerTests.DeinitRemovesAllTimers .................................................   Passed    0.07 sec
+      Start 31: vdrTimerManagerIntegrationTests.CreateDeleteRoundTrip
+31/59 Test #31: vdrTimerManagerIntegrationTests.CreateDeleteRoundTrip .......................................   Passed    0.25 sec
+      Start 32: vdrTimerManagerIntegrationTests.StartExpireDeleteRoundTrip
+32/59 Test #32: vdrTimerManagerIntegrationTests.StartExpireDeleteRoundTrip ..................................   Passed    0.19 sec
+      Start 33: vdrTimerManagerIntegrationTests.StopActivePreventsExpiry
+33/59 Test #33: vdrTimerManagerIntegrationTests.StopActivePreventsExpiry ....................................   Passed    0.70 sec
+      Start 34: vdrTimerManagerIntegrationTests.StopInactiveRoundTrip
+34/59 Test #34: vdrTimerManagerIntegrationTests.StopInactiveRoundTrip .......................................   Passed    0.13 sec
+      Start 35: vdrTimerManagerIntegrationTests.RestartActiveUsesNewDuration
+35/59 Test #35: vdrTimerManagerIntegrationTests.RestartActiveUsesNewDuration ................................   Passed    0.84 sec
+      Start 36: vdrTimerManagerIntegrationTests.DeleteActivePreventsExpiry
+36/59 Test #36: vdrTimerManagerIntegrationTests.DeleteActivePreventsExpiry ..................................   Passed    0.70 sec
+      Start 37: vdrTimerManagerIntegrationTests.MultipleTimersExpireThroughQueue
+37/59 Test #37: vdrTimerManagerIntegrationTests.MultipleTimersExpireThroughQueue ............................   Passed    0.40 sec
+      Start 38: vdrTimerManagerIntegrationTests.QueuedExpiriesKeepNotificationEventSignaled
+38/59 Test #38: vdrTimerManagerIntegrationTests.QueuedExpiriesKeepNotificationEventSignaled .................   Passed    0.43 sec
+      Start 39: vdrTimerManagerIntegrationTests.NegativeAckStatusesFromUserPerspective
+39/59 Test #39: vdrTimerManagerIntegrationTests.NegativeAckStatusesFromUserPerspective ......................   Passed    0.15 sec
+      Start 40: vdrTimerManagerRobustnessTests.MalformedMagicRejected
+40/59 Test #40: vdrTimerManagerRobustnessTests.MalformedMagicRejected .......................................   Passed    0.61 sec
+      Start 41: vdrTimerManagerRobustnessTests.MalformedVersionRejected
+41/59 Test #41: vdrTimerManagerRobustnessTests.MalformedVersionRejected .....................................   Passed    0.17 sec
+      Start 42: vdrTimerManagerRobustnessTests.MalformedTypeRejected
+42/59 Test #42: vdrTimerManagerRobustnessTests.MalformedTypeRejected ........................................   Passed    0.18 sec
+      Start 43: vdrTimerManagerRobustnessTests.MalformedTotalSizeRejected
+43/59 Test #43: vdrTimerManagerRobustnessTests.MalformedTotalSizeRejected ...................................   Passed    0.13 sec
+      Start 44: vdrTimerManagerRobustnessTests.MalformedPayloadSizeRejected
+44/59 Test #44: vdrTimerManagerRobustnessTests.MalformedPayloadSizeRejected .................................   Passed    0.22 sec
+      Start 45: vdrTimerManagerRobustnessTests.MalformedTruncatedHeaderRejected
+45/59 Test #45: vdrTimerManagerRobustnessTests.MalformedTruncatedHeaderRejected .............................   Passed    0.19 sec
+      Start 46: vdrTimerManagerRobustnessTests.MalformedOversizedMessageRejected
+46/59 Test #46: vdrTimerManagerRobustnessTests.MalformedOversizedMessageRejected ............................   Passed    0.18 sec
+      Start 47: vdrTimerManagerRobustnessTests.MalformedPayloadTooSmallRejected
+47/59 Test #47: vdrTimerManagerRobustnessTests.MalformedPayloadTooSmallRejected .............................   Passed    0.19 sec
+      Start 48: vdrTimerManagerRobustnessTests.MalformedPayloadTooLargeRejected
+48/59 Test #48: vdrTimerManagerRobustnessTests.MalformedPayloadTooLargeRejected .............................   Passed    0.22 sec
+      Start 49: vdrTimerManagerRobustnessTests.MalformedOldStartTimerSizeRejected
+49/59 Test #49: vdrTimerManagerRobustnessTests.MalformedOldStartTimerSizeRejected ...........................   Passed    0.19 sec
+      Start 50: vdrTimerManagerRobustnessTests.MalformedAckSentToServerRejected
+50/59 Test #50: vdrTimerManagerRobustnessTests.MalformedAckSentToServerRejected .............................   Passed    0.22 sec
+      Start 51: vdrTimerManagerRobustnessTests.MalformedExpirySentToServerRejected
+51/59 Test #51: vdrTimerManagerRobustnessTests.MalformedExpirySentToServerRejected ..........................   Passed    0.20 sec
+      Start 52: vdrTimerManagerRobustnessTests.MaximumClientAndWaitHandleCapacity
+52/59 Test #52: vdrTimerManagerRobustnessTests.MaximumClientAndWaitHandleCapacity ...........................   Passed    1.41 sec
+      Start 53: vdrTimerManagerRobustnessTests.MaximumClientCapacityRecoversAfterDisconnect
+53/59 Test #53: vdrTimerManagerRobustnessTests.MaximumClientCapacityRecoversAfterDisconnect .................   Passed    0.79 sec
+      Start 54: vdrTimerManagerRobustnessTests.DisconnectCleanupRemovesClientTimers
+54/59 Test #54: vdrTimerManagerRobustnessTests.DisconnectCleanupRemovesClientTimers .........................   Passed    0.39 sec
+      Start 55: vdrTimerManagerRobustnessTests.NegativeAckOwnershipAndRawDuration
+55/59 Test #55: vdrTimerManagerRobustnessTests.NegativeAckOwnershipAndRawDuration ...........................   Passed    0.18 sec
+      Start 56: vdrTimerManagerRobustnessTests.StartTimerAlreadyExpiredTimestampDeliversImmediateExpiry
+56/59 Test #56: vdrTimerManagerRobustnessTests.StartTimerAlreadyExpiredTimestampDeliversImmediateExpiry .....   Passed    0.17 sec
+      Start 57: vdrTimerManagerRobustnessTests.RestartActiveTimerAlreadyExpiredTimestampClearsOldSchedule
+57/59 Test #57: vdrTimerManagerRobustnessTests.RestartActiveTimerAlreadyExpiredTimestampClearsOldSchedule ...   Passed    0.18 sec
+      Start 58: vdrTimerManagerRobustnessTests.ConcurrentPublicApiCalls
+58/59 Test #58: vdrTimerManagerRobustnessTests.ConcurrentPublicApiCalls .....................................   Passed    0.15 sec
+      Start 59: vdrTimerManagerSampleClient.SimultaneousResponseExpiries
+59/59 Test #59: vdrTimerManagerSampleClient.SimultaneousResponseExpiries ....................................   Passed    0.38 sec
+
+100% tests passed, 0 tests failed out of 59
+
+Total Test time (real) =  13.66 sec

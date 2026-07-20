@@ -188,12 +188,15 @@ set(VDR_TIMER_MANAGER_ROBUSTNESS_TEST_SCENARIOS
     MalformedOversizedMessageRejected
     MalformedPayloadTooSmallRejected
     MalformedPayloadTooLargeRejected
+    MalformedOldStartTimerSizeRejected
     MalformedAckSentToServerRejected
     MalformedExpirySentToServerRejected
     MaximumClientAndWaitHandleCapacity
     MaximumClientCapacityRecoversAfterDisconnect
     DisconnectCleanupRemovesClientTimers
     NegativeAckOwnershipAndRawDuration
+    StartTimerAlreadyExpiredTimestampDeliversImmediateExpiry
+    RestartActiveTimerAlreadyExpiredTimestampClearsOldSchedule
     ConcurrentPublicApiCalls
 )
 

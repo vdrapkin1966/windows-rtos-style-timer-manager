@@ -64,9 +64,16 @@ typedef enum vdrMalformedProtocolCase_tag {
     vdrMALFORMED_PROTOCOL_OVERSIZED_MESSAGE,
     vdrMALFORMED_PROTOCOL_PAYLOAD_TOO_SMALL,
     vdrMALFORMED_PROTOCOL_PAYLOAD_TOO_LARGE,
+    vdrMALFORMED_PROTOCOL_OLD_START_TIMER_SIZE,
     vdrMALFORMED_PROTOCOL_ACK_SENT_TO_SERVER,
     vdrMALFORMED_PROTOCOL_EXPIRY_SENT_TO_SERVER
 } vdrMalformedProtocolCase_type;
+
+typedef struct vdrLegacyStartTimerReq_tag {
+    vdrMessageHeader_type header;
+    TimerId_type timer_id;
+    uint64_t duration_ms;
+} vdrLegacyStartTimerReq_type;
 
 typedef struct vdrConcurrentWorkerContext_tag {
     HANDLE start_event;
@@ -98,12 +105,30 @@ static void RobustnessFillHeader(
 } /* end of RobustnessFillHeader() */
 
 /*
+ * Return the same monotonic millisecond time base used by the client API and
+ * server. Raw protocol tests need this because they bypass the public API but
+ * still need to populate api_start_timestamp_ms correctly.
+ */
+static uint64_t RobustnessGetTimeMs(void)
+{
+    static LARGE_INTEGER frequency = { 0 };
+    LARGE_INTEGER counter;
+
+    if (frequency.QuadPart == 0) {
+        QueryPerformanceFrequency(&frequency);
+    }
+
+    QueryPerformanceCounter(&counter);
+    return (uint64_t)((counter.QuadPart * 1000LL) / frequency.QuadPart);
+} /* end of RobustnessGetTimeMs() */
+
+/*
  * Open one synchronous message-mode client pipe within a bounded interval.
  */
 static HANDLE RobustnessOpenRawPipe(DWORD timeout_ms)
 {
     HANDLE pipe = INVALID_HANDLE_VALUE;
-    uint64_t deadline_ms;
+    uint64_t deadline_ms = 0;
     BOOL keep_trying = TRUE;
 
     assert(timeout_ms > 0);
@@ -157,7 +182,7 @@ static BOOL RobustnessWaitForPipeData(HANDLE pipe, DWORD timeout_ms)
 {
     BOOL data_available = FALSE;
     BOOL keep_waiting = TRUE;
-    uint64_t deadline_ms;
+    uint64_t deadline_ms = 0;
 
     assert(pipe != NULL);
     assert(pipe != INVALID_HANDLE_VALUE);
@@ -186,6 +211,50 @@ static BOOL RobustnessWaitForPipeData(HANDLE pipe, DWORD timeout_ms)
 
     return data_available;
 } /* end of RobustnessWaitForPipeData() */
+
+/*
+ * Wait until a caller-selected number of bytes is available on a raw pipe.
+ *
+ * ACK waits use the ACK size, while immediate-expiry tests wait for a smaller
+ * TimerExpired event after the positive StartTimer ACK has already been read.
+ */
+static BOOL RobustnessWaitForPipeBytes(HANDLE pipe, DWORD timeout_ms, DWORD expected_bytes)
+{
+    BOOL data_available = FALSE;
+    BOOL keep_waiting = TRUE;
+    uint64_t deadline_ms = 0;
+
+    assert(pipe != NULL);
+    assert(pipe != INVALID_HANDLE_VALUE);
+    assert(timeout_ms > 0);
+    assert(expected_bytes > 0);
+
+    if ((pipe == NULL) ||
+        (pipe == INVALID_HANDLE_VALUE) ||
+        (timeout_ms == 0) ||
+        (expected_bytes == 0)) {
+        return FALSE;
+    }
+
+    deadline_ms = (uint64_t)GetTickCount64() + timeout_ms;
+
+    while (keep_waiting == TRUE) {
+        DWORD available_bytes = 0;
+
+        if (PeekNamedPipe(pipe, NULL, 0, NULL, &available_bytes, NULL) == FALSE) {
+            keep_waiting = FALSE;
+        } else if (available_bytes >= expected_bytes) {
+            data_available = TRUE;
+            keep_waiting = FALSE;
+        } else if ((uint64_t)GetTickCount64() >= deadline_ms) {
+            keep_waiting = FALSE;
+        } else {
+            Sleep(5);
+        }
+    }
+
+    return data_available;
+} /* end of RobustnessWaitForPipeBytes() */
 
 /*
  * Send an arbitrary command byte count and read the server's generic ACK.
@@ -300,6 +369,7 @@ static BOOL RobustnessRawStartTimer(
         sizeof(request));
     request.timer_id = timer_id;
     request.duration_ms = duration_ms;
+    request.api_start_timestamp_ms = RobustnessGetTimeMs();
 
     if (RobustnessSendRawCommand(pipe, &request, sizeof(request), &ack) == TRUE) {
         if ((ack.header.request_id == request_id) &&
@@ -311,6 +381,94 @@ static BOOL RobustnessRawStartTimer(
 
     return started;
 } /* end of RobustnessRawStartTimer() */
+
+/*
+ * Start one timer through a raw pipe with a caller-provided API timestamp.
+ *
+ * This is used to simulate Windows scheduling delay without actually blocking
+ * the server thread for a long period of time.
+ */
+static BOOL RobustnessRawStartTimerWithTimestamp(
+    HANDLE pipe,
+    uint32_t request_id,
+    TimerId_type timer_id,
+    uint64_t duration_ms,
+    uint64_t api_start_timestamp_ms)
+{
+    vdrStartTimerReq_type request;
+    vdrAckRsp_type ack;
+    BOOL started = FALSE;
+
+    assert(timer_id != TIMER_ID_INVALID);
+    assert(duration_ms > 0);
+
+    if ((timer_id == TIMER_ID_INVALID) || (duration_ms == 0)) {
+        return FALSE;
+    }
+
+    memset(&request, 0, sizeof(request));
+    RobustnessFillHeader(
+        &request.header,
+        vdrMESSAGE_TYPE_START_TIMER_REQ,
+        request_id,
+        sizeof(request));
+    request.timer_id = timer_id;
+    request.duration_ms = duration_ms;
+    request.api_start_timestamp_ms = api_start_timestamp_ms;
+
+    if (RobustnessSendRawCommand(pipe, &request, sizeof(request), &ack) == TRUE) {
+        if ((ack.header.request_id == request_id) &&
+            (ack.ack_status == vdrACK_STATUS_OK) &&
+            (ack.timer_id == timer_id)) {
+            started = TRUE;
+        }
+    }
+
+    return started;
+} /* end of RobustnessRawStartTimerWithTimestamp() */
+
+/*
+ * Read one asynchronous TimerExpired event from a raw pipe.
+ */
+static BOOL RobustnessReadExpiredEvent(
+    HANDLE pipe,
+    TimerId_type expected_timer_id)
+{
+    vdrTimerExpiredEvt_type event_message;
+    DWORD bytes_read = 0;
+    BOOL read_event = FALSE;
+
+    assert(pipe != NULL);
+    assert(pipe != INVALID_HANDLE_VALUE);
+    assert(expected_timer_id != TIMER_ID_INVALID);
+
+    if ((pipe == NULL) ||
+        (pipe == INVALID_HANDLE_VALUE) ||
+        (expected_timer_id == TIMER_ID_INVALID)) {
+        return FALSE;
+    }
+
+    memset(&event_message, 0, sizeof(event_message));
+
+    if (RobustnessWaitForPipeBytes(
+        pipe,
+        ROBUSTNESS_PIPE_TIMEOUT_MS,
+        sizeof(vdrTimerExpiredEvt_type)) == TRUE) {
+        if (ReadFile(pipe, &event_message, sizeof(event_message), &bytes_read, NULL) == TRUE) {
+            if ((bytes_read == sizeof(event_message)) &&
+                (event_message.header.magic == TIMER_PIPE_MAGIC) &&
+                (event_message.header.version == TIMER_PROTOCOL_VERSION) &&
+                (event_message.header.message_type == vdrMESSAGE_TYPE_TIMER_EXPIRED_EVT) &&
+                (event_message.header.request_id == 0) &&
+                (event_message.header.payload_size == vdrPayloadSize(sizeof(event_message))) &&
+                (event_message.timer_id == expected_timer_id)) {
+                read_event = TRUE;
+            }
+        }
+    }
+
+    return read_event;
+} /* end of RobustnessReadExpiredEvent() */
 
 /*
  * Stop one timer through a raw pipe.
@@ -453,6 +611,12 @@ static int RobustnessRunMalformedProtocolCase(vdrMalformedProtocolCase_type malf
             command_size = sizeof(vdrStartTimerReq_type);
             break;
 
+        case vdrMALFORMED_PROTOCOL_OLD_START_TIMER_SIZE:
+            request.header.message_type = vdrMESSAGE_TYPE_START_TIMER_REQ;
+            request.header.payload_size = vdrPayloadSize(sizeof(vdrLegacyStartTimerReq_type));
+            command_size = sizeof(vdrLegacyStartTimerReq_type);
+            break;
+
         case vdrMALFORMED_PROTOCOL_ACK_SENT_TO_SERVER:
             request.header.message_type = vdrMESSAGE_TYPE_ACK_RSP;
             request.header.payload_size = vdrPayloadSize(sizeof(vdrAckRsp_type));
@@ -528,6 +692,11 @@ static int TestMalformedPayloadTooLargeRejected(void)
     return RobustnessRunMalformedProtocolCase(vdrMALFORMED_PROTOCOL_PAYLOAD_TOO_LARGE);
 } /* end of TestMalformedPayloadTooLargeRejected() */
 
+static int TestMalformedOldStartTimerSizeRejected(void)
+{
+    return RobustnessRunMalformedProtocolCase(vdrMALFORMED_PROTOCOL_OLD_START_TIMER_SIZE);
+} /* end of TestMalformedOldStartTimerSizeRejected() */
+
 static int TestMalformedAckSentToServerRejected(void)
 {
     return RobustnessRunMalformedProtocolCase(vdrMALFORMED_PROTOCOL_ACK_SENT_TO_SERVER);
@@ -545,7 +714,7 @@ static BOOL RobustnessWaitForDisconnect(HANDLE pipe, DWORD timeout_ms)
 {
     BOOL disconnected = FALSE;
     BOOL keep_waiting = TRUE;
-    uint64_t deadline_ms;
+    uint64_t deadline_ms = 0;
 
     assert(pipe != NULL);
     assert(pipe != INVALID_HANDLE_VALUE);
@@ -583,7 +752,7 @@ static int TestMaximumClientAndWaitHandleCapacity(void)
     HANDLE excess_client = INVALID_HANDLE_VALUE;
     TimerId_type long_timer_id = TIMER_ID_INVALID;
     TimerId_type probe_timer_id = TIMER_ID_INVALID;
-    uint32_t client_index;
+    uint32_t client_index = 0;
 
     PRINTOUT_TRACE("[robustness] opening %u raw clients\n", TIMER_SERVER_MAX_CLIENTS);
 
@@ -630,7 +799,7 @@ static int TestMaximumClientCapacityRecoversAfterDisconnect(void)
     HANDLE clients[TIMER_SERVER_MAX_CLIENTS] = { NULL };
     HANDLE replacement_client = INVALID_HANDLE_VALUE;
     TimerId_type probe_timer_id = TIMER_ID_INVALID;
-    uint32_t client_index;
+    uint32_t client_index = 0;
 
     PRINTOUT_TRACE("[robustness] opening %u raw clients for capacity recovery\n", TIMER_SERVER_MAX_CLIENTS);
 
@@ -736,6 +905,7 @@ static int TestNegativeAckOwnershipAndRawDuration(void)
 
     start_request.header.request_id = 2202;
     start_request.duration_ms = 1000;
+    start_request.api_start_timestamp_ms = RobustnessGetTimeMs();
     CHECK(RobustnessSendRawCommand(other_client, &start_request, sizeof(start_request), &ack) == TRUE);
     CHECK(ack.header.request_id == 2202);
     CHECK(ack.ack_status == vdrACK_STATUS_TIMER_NOT_OWNED);
@@ -759,6 +929,62 @@ static int TestNegativeAckOwnershipAndRawDuration(void)
 
     return 0;
 } /* end of TestNegativeAckOwnershipAndRawDuration() */
+
+static int TestStartTimerAlreadyExpiredTimestampDeliversImmediateExpiry(void)
+{
+    HANDLE client = RobustnessOpenRawPipe(ROBUSTNESS_PIPE_TIMEOUT_MS);
+    TimerId_type timer_id = TIMER_ID_INVALID;
+    const uint64_t now_ms = RobustnessGetTimeMs();
+
+    PRINTOUT_TRACE("[robustness] immediate expiry timestamp test now_ms=%llu\n",
+        (unsigned long long)now_ms);
+
+    CHECK(client != INVALID_HANDLE_VALUE);
+    CHECK(RobustnessRawCreateTimer(client, 2300, &timer_id) == TRUE);
+
+    /* Simulate the API having accepted StartTimer long enough ago that the
+     * requested duration is already consumed before the server dispatches it. */
+    CHECK(RobustnessRawStartTimerWithTimestamp(
+        client,
+        2301,
+        timer_id,
+        10,
+        (now_ms > 1000) ? (now_ms - 1000) : 0) == TRUE);
+    CHECK(RobustnessReadExpiredEvent(client, timer_id) == TRUE);
+    CHECK(RobustnessRawDeleteTimer(client, 2302, timer_id) == TRUE);
+    CloseHandle(client);
+
+    return 0;
+} /* end of TestStartTimerAlreadyExpiredTimestampDeliversImmediateExpiry() */
+
+static int TestRestartActiveTimerAlreadyExpiredTimestampClearsOldSchedule(void)
+{
+    HANDLE client = RobustnessOpenRawPipe(ROBUSTNESS_PIPE_TIMEOUT_MS);
+    TimerId_type timer_id = TIMER_ID_INVALID;
+    const uint64_t now_ms = RobustnessGetTimeMs();
+
+    PRINTOUT_TRACE("[robustness] active restart immediate expiry timestamp test now_ms=%llu\n",
+        (unsigned long long)now_ms);
+
+    CHECK(client != INVALID_HANDLE_VALUE);
+    CHECK(RobustnessRawCreateTimer(client, 2400, &timer_id) == TRUE);
+    CHECK(RobustnessRawStartTimer(client, 2401, timer_id, 60000) == TRUE);
+
+    /* Restarting an active timer with an already-expired API timestamp must
+     * remove the old active schedule, ACK the command, and deliver exactly one
+     * immediate expiry indication for the restarted timer. */
+    CHECK(RobustnessRawStartTimerWithTimestamp(
+        client,
+        2402,
+        timer_id,
+        10,
+        (now_ms > 1000) ? (now_ms - 1000) : 0) == TRUE);
+    CHECK(RobustnessReadExpiredEvent(client, timer_id) == TRUE);
+    CHECK(RobustnessRawDeleteTimer(client, 2403, timer_id) == TRUE);
+    CloseHandle(client);
+
+    return 0;
+} /* end of TestRestartActiveTimerAlreadyExpiredTimestampClearsOldSchedule() */
 
 /*
  * Execute one complete timer lifecycle from a concurrently released worker.
@@ -808,8 +1034,8 @@ static int TestConcurrentPublicApiCalls(void)
     HANDLE start_event = CreateEventW(NULL, TRUE, FALSE, NULL);
     HANDLE threads[ROBUSTNESS_CONCURRENT_THREAD_COUNT] = { NULL };
     vdrConcurrentWorkerContext_type contexts[ROBUSTNESS_CONCURRENT_THREAD_COUNT] = {0};
-    uint32_t thread_index;
-    uint32_t compare_index;
+    uint32_t thread_index = 0;
+    uint32_t compare_index = 0;
 
     CHECK(start_event != NULL);
 
@@ -866,18 +1092,21 @@ static const RobustnessTestCase_type g_robustness_tests[] = {
     { "MalformedOversizedMessageRejected", TestMalformedOversizedMessageRejected },
     { "MalformedPayloadTooSmallRejected", TestMalformedPayloadTooSmallRejected },
     { "MalformedPayloadTooLargeRejected", TestMalformedPayloadTooLargeRejected },
+    { "MalformedOldStartTimerSizeRejected", TestMalformedOldStartTimerSizeRejected },
     { "MalformedAckSentToServerRejected", TestMalformedAckSentToServerRejected },
     { "MalformedExpirySentToServerRejected", TestMalformedExpirySentToServerRejected },
     { "MaximumClientAndWaitHandleCapacity", TestMaximumClientAndWaitHandleCapacity },
     { "MaximumClientCapacityRecoversAfterDisconnect", TestMaximumClientCapacityRecoversAfterDisconnect },
     { "DisconnectCleanupRemovesClientTimers", TestDisconnectCleanupRemovesClientTimers },
     { "NegativeAckOwnershipAndRawDuration", TestNegativeAckOwnershipAndRawDuration },
+    { "StartTimerAlreadyExpiredTimestampDeliversImmediateExpiry", TestStartTimerAlreadyExpiredTimestampDeliversImmediateExpiry },
+    { "RestartActiveTimerAlreadyExpiredTimestampClearsOldSchedule", TestRestartActiveTimerAlreadyExpiredTimestampClearsOldSchedule },
     { "ConcurrentPublicApiCalls", TestConcurrentPublicApiCalls }
 };
 
 static int RunOneRobustnessTest(const char* name)
 {
-    size_t test_index;
+    size_t test_index = 0;
 
     assert(name != NULL);
 
@@ -903,7 +1132,7 @@ static int RunOneRobustnessTest(const char* name)
 
 int main(int argc, char** argv)
 {
-    size_t test_index;
+    size_t test_index = 0;
     int result = 0;
 
     if (argc == 2) {

@@ -125,6 +125,27 @@ static vdrClientApiState_type* vdrClientApi_GetState(void)
 } /* end of vdrClientApi_GetState() */
 
 /*
+ * Return a process-local monotonic timestamp in milliseconds.
+ *
+ * The server uses the same QueryPerformanceCounter-derived time base, so the
+ * StartTimer command can carry an API-side timestamp that lets the server
+ * subtract Windows scheduling and pipe-delivery delay from the requested timer
+ * duration.
+ */
+static uint64_t vdrClientApi_GetTimeMs(void)
+{
+    static LARGE_INTEGER frequency = { 0 };
+    LARGE_INTEGER counter;
+
+    if (frequency.QuadPart == 0) {
+        QueryPerformanceFrequency(&frequency);
+    }
+
+    QueryPerformanceCounter(&counter);
+    return (uint64_t)((counter.QuadPart * 1000LL) / frequency.QuadPart);
+} /* end of vdrClientApi_GetTimeMs() */
+
+/*
  * Print a client API trace line and flush immediately.
  *
  * Each trace is prefixed with its source file and call-site line number.
@@ -252,7 +273,7 @@ static BOOL CALLBACK vdrClientApi_InitializeProcessState(
 static void vdrClientApi_FreeExpiredQueue(void)
 {
     vdrClientApiState_type* api_state = vdrClientApi_GetState();
-    vdrExpiredQueueNode_type* current;
+    vdrExpiredQueueNode_type* current = NULL;
 
     EnterCriticalSection(&api_state->expiry_mutex);
     current = api_state->expired_head;
@@ -289,8 +310,8 @@ static void vdrClientApi_FreeExpiredQueue(void)
 static void vdrClientApi_Cleanup(void)
 {
     vdrClientApiState_type* api_state = vdrClientApi_GetState();
-    HANDLE receiver_thread;
-    DWORD wait_result;
+    HANDLE receiver_thread = NULL;
+    DWORD wait_result = WAIT_FAILED;
 
     InitOnceExecuteOnce(&api_state->initialize_once, vdrClientApi_InitializeProcessState, NULL, NULL);
 
@@ -393,7 +414,7 @@ static BOOL vdrClientApi_IsValidServerHeader(
     const vdrMessageHeader_type* header,
     DWORD bytes_read)
 {
-    uint32_t expected_size;
+    uint32_t expected_size = 0;
 
     assert(header != NULL);
 
@@ -438,7 +459,7 @@ static BOOL vdrClientApi_IsValidServerHeader(
 static void vdrClientApi_QueueExpiredTimer(TimerId_type timer_id)
 {
     vdrClientApiState_type* api_state = vdrClientApi_GetState();
-    vdrExpiredQueueNode_type* node;
+    vdrExpiredQueueNode_type* node = NULL;
 
     if (timer_id == TIMER_ID_INVALID) {
         PRINTOUT_TRACE("[client-api][error] invalid timer expiry indication received: timer=%llu\n",
@@ -495,7 +516,7 @@ static void vdrClientApi_QueueExpiredTimer(TimerId_type timer_id)
 static DWORD WINAPI vdrClientApi_ReceiverThread(LPVOID parameter)
 {
     vdrClientApiState_type* api_state = vdrClientApi_GetState();
-    HANDLE read_event;
+    HANDLE read_event = NULL;
 
     (void)parameter;
 
@@ -527,10 +548,10 @@ static DWORD WINAPI vdrClientApi_ReceiverThread(LPVOID parameter)
     while (TRUE) {
         vdrServerToClientMessage_type message;
         OVERLAPPED overlapped;
-        DWORD bytes_read;
-        DWORD error;
-        DWORD wait_result;
-        BOOL ok;
+        DWORD bytes_read = 0;
+        DWORD error = ERROR_SUCCESS;
+        DWORD wait_result = WAIT_FAILED;
+        BOOL ok = FALSE;
 
         EnterCriticalSection(&api_state->state_mutex);
 
@@ -543,7 +564,6 @@ static DWORD WINAPI vdrClientApi_ReceiverThread(LPVOID parameter)
 
         ZeroMemory(&message, sizeof(message));
         ZeroMemory(&overlapped, sizeof(overlapped));
-        bytes_read = 0;
         ResetEvent(read_event);
         overlapped.hEvent = read_event;
 
@@ -650,7 +670,7 @@ static DWORD WINAPI vdrClientApi_ReceiverThread(LPVOID parameter)
 static vdrAckStatus_type vdrClientApi_EnsureInitialized(void)
 {
     vdrClientApiState_type* api_state = vdrClientApi_GetState();
-    BOOL ok;
+    BOOL ok = FALSE;
 
     InitOnceExecuteOnce(&api_state->initialize_once, vdrClientApi_InitializeProcessState, NULL, NULL);
 
@@ -779,13 +799,13 @@ static vdrAckStatus_type vdrClientApi_SendCommandAndWaitForAck(
     TimerId_type* out_timer_id)
 {
     vdrClientApiState_type* api_state = vdrClientApi_GetState();
-    DWORD bytes_written;
-    DWORD wait_result;
-    DWORD error;
-    HANDLE write_event;
+    DWORD bytes_written = 0;
+    DWORD wait_result = WAIT_FAILED;
+    DWORD error = ERROR_SUCCESS;
+    HANDLE write_event = NULL;
     OVERLAPPED overlapped;
-    BOOL ok;
-    uint32_t request_id;
+    BOOL ok = FALSE;
+    uint32_t request_id = 0;
 
     assert(command != NULL);
     assert(command_size >= sizeof(vdrMessageHeader_type));
@@ -819,7 +839,6 @@ static vdrAckStatus_type vdrClientApi_SendCommandAndWaitForAck(
     ResetEvent(api_state->ack_event);
     LeaveCriticalSection(&api_state->state_mutex);
 
-    bytes_written = 0;
     ZeroMemory(&overlapped, sizeof(overlapped));
     write_event = CreateEventW(NULL, TRUE, FALSE, NULL);
 
@@ -996,6 +1015,17 @@ vdrAckStatus_type vdrTimerManager_StartTimer(TimerId_type timer_id, uint64_t dur
     command.start_timer_req.timer_id = timer_id;
     command.start_timer_req.duration_ms = duration_ms;
 
+    /* The accepted API call owns the logical start time. Store this timestamp
+     * directly in the request after all parameters are validated but before the
+     * request is sent, so the server can account for Windows-side scheduling
+     * and pipe delivery delay. */
+    command.start_timer_req.api_start_timestamp_ms = vdrClientApi_GetTimeMs();
+
+    PRINTOUT_TRACE("[client-api] StartTimer accepted timer=%llu duration_ms=%llu api_start_timestamp_ms=%llu\n",
+        (unsigned long long)timer_id,
+        (unsigned long long)duration_ms,
+        (unsigned long long)command.start_timer_req.api_start_timestamp_ms);
+
     /* The server echoes command completion through the generic ACK. */
     return vdrClientApi_SendCommandAndWaitForAck(&command, sizeof(vdrStartTimerReq_type), NULL);
 } /* end of vdrTimerManager_StartTimer() */
@@ -1105,7 +1135,7 @@ vdrAckStatus_type vdrTimerManager_GetNotificationEvent(HANDLE* out_event)
 vdrAckStatus_type vdrTimerManager_GetExpiredTimer(TimerId_type* out_timer_id)
 {
     vdrClientApiState_type* api_state = vdrClientApi_GetState();
-    vdrExpiredQueueNode_type* node;
+    vdrExpiredQueueNode_type* node = NULL;
 
     assert(out_timer_id != NULL);
 

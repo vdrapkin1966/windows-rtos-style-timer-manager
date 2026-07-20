@@ -16,9 +16,9 @@ This repository is the C version of the project. The server is intentionally bui
 
 The project was developed as a reference implementation of an RTOS-style timer service hosted on Windows. It is not intended to be a production or commercial timer service. The goal is to demonstrate how a relatively small set of C data structures, Windows synchronization objects, named-pipe messages, and defensive API rules can be combined into a complete client/server timer system.
 
-The design deliberately keeps the implementation explicit. Timers are dynamically allocated with `malloc()` and released with `free()`. Active and inactive timers are stored in linked lists. Timer IDs are generated from a running counter. Public API calls validate parameters before executing internal logic. The implementation emphasizes readability through clear structure, consistent naming, and focused comments that explain design intent, control flow, state transitions, and Windows API interactions.
+The design deliberately keeps the implementation explicit. Timers are dynamically allocated with `malloc()` and released with `free()`. Active and inactive timers are stored in linked lists. Timer IDs are generated from a running counter. Public API calls validate parameters before executing internal logic. `StartTimer` calls are timestamped by the client API before the command is sent to the server, which lets the server subtract Windows scheduling and pipe-delivery delay from the requested duration before arming the timer. The implementation emphasizes readability through clear structure, consistent naming, and focused comments that explain design intent, control flow, state transitions, and Windows API interactions.
 
-This project also served as a practical evaluation of an AI-assisted development workflow using OpenAI Codex. Requirements and architectural decisions were developed through iterative discussions before implementation. Throughout the project, Codex was used as an engineering assistant to explore design alternatives, review implementation ideas, suggest test scenarios, refine documentation, and help organize the repository. Final architectural decisions, implementation, verification, and technical content remained the responsibility of the project author. The resulting repository demonstrates both the design and implementation of the timer service and a disciplined engineering workflow in which AI is used to assist—but not replace—engineering judgment.
+This project also served as a practical evaluation of an AI-assisted development workflow using OpenAI Codex. Requirements and architectural decisions were developed through iterative discussions before implementation. Throughout the project, Codex was used as an engineering assistant to explore design alternatives, review implementation ideas, suggest test scenarios, refine documentation, and help organize the repository. Final architectural decisions, implementation, verification, and technical content remained the responsibility of the project author. The resulting repository demonstrates both the design and implementation of the timer service and a disciplined engineering workflow in which AI is used to assist, but not replace, engineering judgment.
 
 ## What Engineering Problems Does It Demonstrate?
 
@@ -26,6 +26,7 @@ This project demonstrates several practical engineering problems that appear in 
 
 - A server-owned timer model where clients request timer operations but do not directly own timer internals.
 - One-shot timer lifecycle management: create, start, restart, stop, expire, and delete.
+- Client-side timestamping of `StartTimer` requests so the server can compensate for Windows scheduling delay before arming the waitable timer.
 - Sorted active-list scheduling using delta values between scheduled expiry times.
 - Correct behavior when active timers are removed from the head, middle, or tail of the active list.
 - Asynchronous named-pipe communication using overlapped I/O and event completion.
@@ -36,7 +37,7 @@ This project demonstrates several practical engineering problems that appear in 
 - Defensive binary protocol validation for magic, version, message type, total size, and payload size.
 - Recovery after maximum-client and wait-handle capacity edge cases.
 - Public API thread safety through internal serialization and synchronization.
-- Regression testing of sunny-day behavior, malformed protocol messages, ownership errors, timer arithmetic near `UINT64_MAX`, and concurrent API use.
+- Regression testing of sunny-day behavior, malformed protocol messages, ownership errors, timer arithmetic near `UINT64_MAX`, immediate-expiry timestamp handling, and concurrent API use.
 
 ## What Technologies Were Used?
 
@@ -141,6 +142,9 @@ tests\
 docs\
   vdrapkinTimerManager_Project_Manual.pdf
                                  PDF copy of the full project manual.
+
+  start_timer_timestamp_revision.md
+                                 Protocol-version-2 StartTimer timestamp adjustment note.
   
   architecture\
   system_architecture.png        High-level application, API, server, protocol, and timer-core view.
